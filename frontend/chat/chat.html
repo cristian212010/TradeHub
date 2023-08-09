@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TradeHub</title>
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#fff7ed",
+                100: "#ffedd5",
+                200: "#fed7aa",
+                300: "#fdba74",
+                400: "#fb923c",
+                500: "#f97316",
+                600: "#ea580c",
+                700: "#c2410c",
+                800: "#9a3412",
+                900: "#7c2d12",
+              },
+            },
+          },
+          fontFamily: {
+            body: [
+              "Inter",
+              "ui-sans-serif",
+              "system-ui",
+              "-apple-system",
+              "system-ui",
+              "Segoe UI",
+              "Roboto",
+              "Helvetica Neue",
+              "Arial",
+              "Noto Sans",
+              "sans-serif",
+              "Apple Color Emoji",
+              "Segoe UI Emoji",
+              "Segoe UI Symbol",
+              "Noto Color Emoji",
+            ],
+            sans: [
+              "Inter",
+              "ui-sans-serif",
+              "system-ui",
+              "-apple-system",
+              "system-ui",
+              "Segoe UI",
+              "Roboto",
+              "Helvetica Neue",
+              "Arial",
+              "Noto Sans",
+              "sans-serif",
+              "Apple Color Emoji",
+              "Segoe UI Emoji",
+              "Segoe UI Symbol",
+              "Noto Color Emoji",
+            ],
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <section class="body-chat">
+      <div class="container">
+        <div class="leftSide">
+          <div class="header">
+            <div class="userimg" id="contenedorImg">
+              <img src="" class="cover" id="avatarPersonal"/>
+            </div>
+            <ul class="nav_icons">
+              <li><ion-icon name="scan-circle-outline"></ion-icon></li>
+              <li><ion-icon name="chatbox"></ion-icon></li>
+              <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+            </ul>
+          </div>
+          <div class="search_chat">
+            <div>
+              <input type="text" placeholder="" />
+              <ion-icon name="search-outline"></ion-icon>
+            </div>
+          </div>
+          <div class="chatlist" id="contenedorChats">
+            <!-- <div class="block active">
+              <div class="imgbx">
+                <img src="img/chat-grupal.jpg" class="cover" />
+              </div>
+              <div class="details">
+                <div class="listHead">
+                  <h4>Chat</h4>
+                  <p class="time" style="visibility: hidden;">
+                    Hora en 2da versión.
+                  </p>
+                </div>
+                <div class="message_p">
+                  <p>Recuerda, respetar a los demás usuarios.</p>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="rightSide" id="formChatGrupal">
+          <div class="header">
+            <div class="imgText">
+              <div class="userimg">
+                <img src="" class="cover" />
+              </div>
+              <h4>Chat<br /><span>en línea</span></h4>
+            </div>
+            <ul class="nav_icons">
+              <li><ion-icon name="search-outline"></ion-icon></li>
+              <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+            </ul>
+          </div>
+
+          <div class="chatBox" id="chatBox">
+<!--             <div class="message">
+              <p>Buenas</p>
+            </div>
+            <div class="message my_message">
+              <p>Buenas</p>
+            </div> -->
+          </div>
+
+          <div class="chatBox_input">
+            <input id="userFile" type="file" accept="image/png, image/jpeg" hidden />
+            <button id="sendFile"><ion-icon name="attach-outline"></ion-icon></button>
+            <input type="text" class="nuevoMensaje" placeholder="Escribir mensaje" />
+            <button id="sendMessage"><ion-icon name="send-outline"></ion-icon></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/chat.js" type="module"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TradeHub</title>
+  <link rel="icon" type="image/png" href="../assets/img/logo.png">
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="./css/perfil.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+    
+    <div class="overlay" data-overlay></div>
+    
+  <!--
+    - MODAL
+  -->
+
+  <div class="modal" data-modal id="modalProductos">
+
+    <div class="modal-close-overlay" data-modal-overlay></div>
+
+    <div class="modal-content">
+
+      <button class="modal-close-btn" data-modal-close>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="newsletter">
+
+        <form action="#" method="post" id="registrarProducto">
+
+          <div class="newsletter-header">
+
+            <h3 class="newsletter-title">Registre el producto.</h3>
+
+            <p class="newsletter-desc">
+              ¡Registra tu producto y publícalo para recibir numerosas ofertas!
+            </p>
+
+          </div>
+
+          <input type="text" id="nombre" class="email-field" placeholder="Nombre del producto" required>
+          <input type="text" id="marca" class="email-field" placeholder="Ingrese la marca" required>
+          <input type="text" id="descripcion" class="email-field" placeholder="Descripcion del producto" required>
+          <input type="number" id="stock" class="email-field" placeholder="Ingrese la cantidad" required>
+          <select id="selectCategoria">
+            <!-- <option value="opcion1">Opción 1</option> -->
+          </select>
+          <input type="file" id="imagen" name="file" required>
+
+          <button type="submit" class="btn-newsletter">PUBLICAR</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Modal editar perfil -->
+  <div class="modal" data-modal id="modalPerfil">
+
+    <div class="modal-close-overlay" data-modal-overlay></div>
+
+    <div class="modal-content">
+
+      <button class="modal-close-btn" id="closeEditPerfil">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="newsletter">
+
+        <form action="#" method="post" id="editarPerfil">
+
+          <div class="newsletter-header">
+
+            <h3 class="newsletter-title">Edite su perfil.</h3>
+
+          </div>
+
+          <input type="text" id="nombreUsuario" class="email-field" placeholder="Nombres" required>
+          <input type="text" id="apellidoUsuario" class="email-field" placeholder="Apellidos" required>
+          <input type="number" id="edadUsuario" class="email-field" placeholder="Edad" required>
+          <input type="email" id="emailUsuario" class="email-field" placeholder="Email" required>
+          <label for="">Seleccione foto de perfil</label>
+          <input type="file" id="imagenUsuario" name="file">
+
+          <button type="submit" class="btn-newsletter">EDITAR</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Modal editar productos -->
+  <div class="modal" data-modal id="modalEditProductos">
+
+    <div class="modal-close-overlay" data-modal-overlay></div>
+
+    <div class="modal-content">
+
+      <button class="modal-close-btn" data-modal-close id="closeEditProducto">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="newsletter">
+
+        <form method="post" id="formularioUpdateProductos">
+
+          <div class="newsletter-header">
+
+            <h3 class="newsletter-title">Edite el producto.</h3>
+
+          </div>
+
+          <input type="text" type="submit" class="idProducto" style="display: none;">
+          <input type="text" id="nombreEdit" class="email-field" placeholder="Nombre del producto" required>
+          <input type="text" id="marcaEdit" class="email-field" placeholder="Ingrese la marca" required>
+          <input type="text" id="descripcionEdit" class="email-field" placeholder="Descripcion del producto" required>
+          <input type="number" id="stockEdit" class="email-field" placeholder="Ingrese la cantidad" required>
+          <select id="selectCategoriaUpdate">
+            <!-- <option value="opcion1">Opción 1</option> -->
+          </select>
+          <input type="file" id="imagenEdit" name="file" required>
+
+          <button type="submit" class="btn-newsletter">EDITAR</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+    <!--
+    - HEADER
+  -->
+
+  <header>
+
+    <div class="header-top">
+
+      <div class="container">
+
+        <ul class="header-social-container">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="header-alert-news">
+          <p>
+            <b>"Dale vida a lo que no usas,</b>
+            encuentra tesoros sin gastar."
+          </p>
+        </div>
+
+        <div class="header-top-actions">
+
+          <select name="currency">
+
+            <option value="usd">USD &dollar;</option>
+            <option value="eur">EUR &euro;</option>
+
+          </select>
+
+          <a href="#" class="banner-btn" id="btnProductos">AGREGAR PRODUCTO</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="header-main">
+
+      <div class="container">
+
+        <a href="#" class="header-logo">
+          <p class="banner-text"> TradeHub</p>
+        </a>
+
+        <div class="header-search-container">
+
+          <input type="search" name="search" class="search-field" placeholder="Ingrese el nombre de la categoría...">
+
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="header-user-actions">
+
+          <a href="../home/index.html" class="action-btn">
+            <ion-icon name="home-outline"></ion-icon>
+          </a>
+
+          <a class="action-btn" href="../chat/chat.html">
+            <ion-icon name="chatbubble-outline"></ion-icon>
+            <span class="count">0</span>
+          </a>
+
+          <button class="action-btn" id="cerrarSesion">
+            <ion-icon name="log-out-outline"></ion-icon>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <section>
+    <div class="perfil">
+      <img src="" alt="Imagen de perfil" id="avatar">
+      <div class="datos">
+        <p class="banner-subtitle" id="nombreUser"></p>
+        <p class="banner-text" id="email"></p>
+        <p class="banner-text" id="rol"></p>
+        <div class="button-container">
+          <a href="#" class="banner-btn" id="btnEditPerfil">EDITAR PERFIL</a>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <div class="centrarTitulo">
+        <h2 class="banner-text">Productos disponibles</h2>
+      </div>
+      <div class="">
+        <div class="product-main">
+              <div class="centrarProductos" id="productosUsuario">
+                <!-- <div class="showcase">
+      
+                  <a href="#" class="showcase-img-box">
+                    <img src="./assets/images/products/clothes-1.jpg" alt="relaxed short full sleeve t-shirt" width="70" class="showcase-img">
+                  </a>
+      
+                  <div class="showcase-content">
+      
+                    <a href="#">
+                      <h4 class="showcase-title">Relaxed Short full Sleeve T-Shirt</h4>
+                    </a>
+      
+                    <a href="#" class="showcase-category">Clothes</a>
+      
+                    <div class="price-box">
+                      <p class="price">$45.00</p>
+                      <del>$12.00</del>
+                    </div>
+      
+                  </div>
+      
+                </div> -->
+ 
+              </div>
+        </div>
+      </div>
+    </div>
+      
+  </section>
+
+  
+  <!--
+    - custom js link
+  -->
+  <script src="../assets/js/script.js"></script>
+  <script type="module" src="./js/perfil.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
